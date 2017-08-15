@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gruppo|Raleway');
 
 body {
+  color: $white;
   font-family: 'Raleway';
 }
 
@@ -15,6 +16,7 @@ strong {
   font-weight: bold;
 }
 
+$font-size-ginormous: 48px;
 $font-size-giant: 32px;
 $font-size-huge: 26px;
 $font-size-large: 22px;

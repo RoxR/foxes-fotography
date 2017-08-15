@@ -10,7 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170814203047) do
+ActiveRecord::Schema.define(version: 20170815144509) do
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres_models", id: false, force: :cascade do |t|
+    t.integer "model_id", null: false
+    t.integer "genre_id", null: false
+    t.index ["genre_id", "model_id"], name: "index_genres_models_on_genre_id_and_model_id"
+    t.index ["model_id", "genre_id"], name: "index_genres_models_on_model_id_and_genre_id"
+  end
+
+  create_table "models", force: :cascade do |t|
+    t.string "name"
+    t.string "height"
+    t.string "weight"
+    t.string "bust"
+    t.string "waist"
+    t.string "hips"
+    t.string "cup"
+    t.string "dress"
+    t.string "shoe"
+    t.string "hair_color"
+    t.string "hair_length"
+    t.string "eye_color"
+    t.string "ethnicity"
+    t.string "skin_color"
+    t.boolean "nudes"
+    t.string "tattoos"
+    t.string "piercings"
+    t.string "experience"
+    t.string "compensation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
