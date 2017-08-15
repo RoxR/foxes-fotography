@@ -1,16 +1,11 @@
 common: &common
-  adapter: postgresql
-  encoding: unicode
   host: localhost
-  pool: 5
-  username: rails
-  password: rails
+  timeout: 5000
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *common
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
   database: yen_models_development
 
 test: &test
@@ -25,5 +20,9 @@ staging:
   database: yen_models_staging
 
 production:
-  <<: *common
-  database: yen_models_production
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: rails
+  password: rails
