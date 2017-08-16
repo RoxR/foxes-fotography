@@ -41,6 +41,7 @@
     opacity: 0;
     background: rgba(0, 0, 0, 0);
     & > div {
+      @include noselect;
       font-size: $font-size-small;
       margin-top: 8px;
       pointer-events: none;
