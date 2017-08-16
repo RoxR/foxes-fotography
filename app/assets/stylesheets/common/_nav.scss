@@ -1,6 +1,7 @@
 nav {
   background: rgba(8, 6, 19, 0.75);
   height: 46px;
+  margin-bottom: $margin * 5;
   position: relative;
   z-index: 1000;
 
@@ -50,7 +51,7 @@ nav {
 .company-backdrop {
   background: rgba(8, 6, 19, 0.75);
   height: 56px;
-  width: 362px;
+  width: 568px;
   left: -27px;
   z-index: 1000;
   transform: skew(-12deg);
@@ -63,20 +64,20 @@ nav {
   left: 0;
   z-index: 1001;
 
-  .company-name-yen, .company-name-models {
+  .company-name-foxes, .company-name-fotography {
     position: relative;
     z-index: 1002;
   }
 
-  .company-name-yen {
+  .company-name-foxes {
     font-size: $font-size-ginormous * 1.5;
     top: 13px;
     left: 12px;
   }
 
-  .company-name-models {
+  .company-name-fotography {
     font-size: $font-size-huge * 1.5;
     top: 4px;
-    left: 150px;
+    left: 267px;
   }
 }

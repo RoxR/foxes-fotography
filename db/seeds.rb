@@ -1,3 +1,10 @@
+User.create({
+  email: 'test@test.com',
+  password: "testtest",
+  password_confirmation: "testtest",
+  confirmed_at: DateTime.now
+})
+
 Genre.genres.each do |genre|
   Genre.create(name: genre)
 end

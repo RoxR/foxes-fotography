@@ -31,6 +31,14 @@ class Model < ApplicationRecord
 
   enum gender: [:female, :male]
 
+  scope :women, -> {
+    where(gender: :female)
+  }
+
+  scope :men, -> {
+    where(gender: :male)
+  }
+
   def self.heights
     [ %Q{4' 0" / 122 cm},
       %Q{4' 1" / 124 cm},

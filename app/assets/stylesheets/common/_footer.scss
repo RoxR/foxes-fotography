@@ -1,7 +1,11 @@
 footer {
+  clear: both;
+  margin: $margin * 4;
+
   div {
     @include center;
-    margin-bottom: $margin * 2;
+    margin-top: $margin;
+    margin-bottom: $margin;
     text-align: center;
     width: 410px;
   }

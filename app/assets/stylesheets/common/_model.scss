@@ -1,0 +1,72 @@
+.model {
+  @include shadow(0px, 0px, 12px, 4px, rgba(255, 255, 255, 0.2));
+  display: inline-block;
+  margin: $margin / 2;
+  height: 400px;
+  position: relative;
+  width: 306px;
+  overflow: hidden;
+  border-radius: $margin / 4;
+
+  &:hover {
+    .model-attribute-titles, .model-attributes {
+      background: rgba(0, 0, 0, 0.5);
+      top: 0px;
+      opacity: 1;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .model-portrait {
+    @include position(absolute, 0);
+    background-image: image-url(gandalf);
+    background-size: contain;
+  }
+
+  .model-name {
+    background: rgba(0, 0, 0, 0.5);
+    padding: $margin / 4;
+    font-size: $font-size-large;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .model-attribute-titles, .model-attributes {
+    transition: all .5s ease;
+    transform: translateZ(0);
+    opacity: 0;
+    background: rgba(0, 0, 0, 0);
+    & > div {
+      font-size: $font-size-small;
+      margin-top: 8px;
+      pointer-events: none;
+    }
+  }
+
+  .model-attribute-titles {
+    position: absolute;
+    left: 0;
+    top: -360px;
+    right: 66.66%;
+
+    & > div {
+      text-align: right;
+    }
+  }
+
+  .model-attributes {
+    position: absolute;
+    right: 0;
+    top: -360px;
+    left: 33.33%;
+
+    & > div {
+      padding-left: $margin / 3;
+      text-align: left;
+    }
+  }
+}

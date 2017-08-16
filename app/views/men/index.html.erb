@@ -1,2 +1,3 @@
-<h1>Men#index</h1>
-<p>Find me in app/views/men/index.html.erb</p>
+<% @men.each do |m| %>
+  <%= render partial: 'shared/model', locals: { model: m } %>
+<% end %>

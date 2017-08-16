@@ -1,3 +1,6 @@
 .container {
-
+  @include center;
+  clear: both;
+  width: 1024px;
+  padding: $margin / 2;
 }
