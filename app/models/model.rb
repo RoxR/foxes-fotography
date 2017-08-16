@@ -702,7 +702,9 @@ class Model < ApplicationRecord
       "Western Sahara",
       "Yemen",
       "Yugoslavia",
-      "ZaireZambiaZimbabwe"
+      "Zaire",
+      "Zambia",
+      "Zimbabwe"
     ]
   end
 end
