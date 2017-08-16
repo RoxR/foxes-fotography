@@ -1,2 +1,8 @@
-<h1>NewTalent#index</h1>
-<p>Find me in app/views/new_talent/index.html.erb</p>
+<div class="page-title">
+  New Talent
+</div>
+<div class="models">
+  <% @new.each do |n| %>
+    <%= render partial: 'shared/model', locals: { model: n } %>
+  <% end %>
+</div>

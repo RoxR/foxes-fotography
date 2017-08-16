@@ -12,6 +12,7 @@ end
 100.times do |gender|
   Model.create(
     name: Faker::Name.unique.name,
+    new: [true, false].sample,
     gender: Model.genders.keys.sample,
     height: Model.heights.sample,
     weight: Model.weights.sample,

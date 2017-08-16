@@ -39,6 +39,10 @@ class Model < ApplicationRecord
     where(gender: :male)
   }
 
+  scope :new_talent, -> {
+    where(new: true)
+  }
+
   def self.heights
     [ %Q{4' 0" / 122 cm},
       %Q{4' 1" / 124 cm},

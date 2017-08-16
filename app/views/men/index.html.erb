@@ -1,3 +1,8 @@
-<% @men.each do |m| %>
-  <%= render partial: 'shared/model', locals: { model: m } %>
-<% end %>
+<div class="page-title">
+  Men
+</div>
+<div class="models">
+  <% @men.each do |m| %>
+    <%= render partial: 'shared/model', locals: { model: m } %>
+  <% end %>
+</div>
