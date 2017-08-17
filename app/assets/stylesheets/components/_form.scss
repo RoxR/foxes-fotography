@@ -21,6 +21,8 @@ form {
 
   input[type=text],
   input[type=email],
+  input[type=integer],
+  input[type=boolean],
   input[type=password],
   select,
   textarea {
@@ -49,6 +51,9 @@ form {
     @extend .btn;
     border: none;
     width: 100%;
+    margin-top: $margin;
+    font-size: $font-size-big;
+    padding: $margin / 2;
   }
 
   .form-heading {
