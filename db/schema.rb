@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817181640) do
+ActiveRecord::Schema.define(version: 20170817194330) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20170817181640) do
     t.string "country"
     t.boolean "new", default: true
     t.boolean "confirmed", default: false
+    t.string "phone_number"
+    t.string "email"
   end
 
   create_table "users", force: :cascade do |t|

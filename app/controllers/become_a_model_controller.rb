@@ -19,6 +19,8 @@ class BecomeAModelController < ApplicationController
   def become_a_model_params
   	params.permit(
   		:name,
+      :email,
+      :phone_number, 
   		:gender,
   		:height, 
   		:weight, 
@@ -28,7 +30,6 @@ class BecomeAModelController < ApplicationController
   		:cup, 
   		:dress,
   		:shoe,
-  		:hair_color, 
   		:hair_length,
   		:eye_color,
   		:ethnicity, 
@@ -38,7 +39,8 @@ class BecomeAModelController < ApplicationController
   		:piercings, 
   		:experience,
   		:compensation,
-  		:country
+  		:country,
+      :hair_color
   	)
   end
 
