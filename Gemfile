@@ -36,6 +36,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'timecop'
+  gem 'rails_real_favicon'
 end
 
 group :development do
