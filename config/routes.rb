@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get 'new_talent', to: 'new_talent#index'
   get 'photographers', to: 'photographers#index'
   get 'contact', to: 'contact#index'
-  get 'about', to: 'about#index'
+  get 'our_story', to: 'our_story#index'
   get 'become_a_model', to: 'become_a_model#index'
 end
