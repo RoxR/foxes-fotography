@@ -135,6 +135,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    hirb (0.7.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
@@ -323,6 +324,7 @@ DEPENDENCIES
   font-awesome-rails
   guard-livereload (~> 2.5)
   guard-rspec (~> 4.7)
+  hirb
   jbuilder (~> 2.5)
   jquery-rails
   jquery-slick-rails

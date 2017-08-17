@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     match 'admin/photographer/create', to: 'admin#create_photographer', via: :create
   end
 
+  match 'submitted', to: 'become_a_model#submitted', via: :get
   get 'women', to: 'women#index'
   get 'men', to: 'men#index'
   get 'new_talent', to: 'new_talent#index'

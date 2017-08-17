@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.2'
 gem 'pg'
 gem 'puma', '~> 3.7'
 
+gem 'hirb'
 gem 'autoprefixer-rails'
 gem 'compass-rails'
 gem 'devise', '4.3.0'
