@@ -19,7 +19,7 @@
     <div>
       <%= label_tag :gender %>
       <%= f.select :gender,
-          options_for_select(Model.genders) %>
+          options_for_select(Model.genders.map { |k, v| [k, k] }) %>
     </div>
     <div>
       <%= label_tag :height %>
