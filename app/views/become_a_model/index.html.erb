@@ -17,6 +17,11 @@
       <%= f.text_field :name %>
     </div>
     <div>
+      <%= label_tag :gender %>
+      <%= f.select :gender,
+          options_for_select(Model.genders) %>
+    </div>
+    <div>
       <%= label_tag :height %>
       <%= f.select :height,
           options_for_select(Model.heights.map { |k| [k, k] }) %>
@@ -105,6 +110,11 @@
       <%= label_tag :compensation %>
       <%= f.select :compensation,
           options_for_select(Model.compensation.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :country %>
+      <%= f.select :country,
+          options_for_select(Model.countries.map { |k| [k, k] }) %>
     </div>
     
     <div class='form-submit-wrapper'>
