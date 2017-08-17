@@ -49,6 +49,9 @@ form {
     @extend .btn;
     border: none;
     width: 100%;
+    margin-top: $margin;
+    font-size: $font-size-big;
+    padding: $margin / 2;
   }
 
   .form-heading {
