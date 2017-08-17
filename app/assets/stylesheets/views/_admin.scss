@@ -3,3 +3,25 @@ body.devise-sessions {
     margin-bottom: $margin * 5;
   }
 }
+
+body.admin {
+  .admin-controls {
+    ul {
+      @include center;
+      display: block;
+      width: 368px;
+    }
+
+    li {
+      float: left;
+      margin-left: $margin / 2;
+      margin-right: $margin / 2;
+    }
+
+    a {
+      @extend .btn;
+      text-align: center;
+      width: 160px;
+    }
+  }
+}

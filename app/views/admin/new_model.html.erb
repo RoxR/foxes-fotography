@@ -1,0 +1,20 @@
+<%= form_with(model: @model, url: admin_model_create_path, id: 'form_model') do |f| %>
+  <% if @model.errors.any? %>
+    <div id='error_explanation'>
+      <h2><%= pluralize(@model.errors.count, 'error') %> prohibited this @model from being saved:</h2>
+      <ul>
+        <% @model.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.text_area :body, id: :area %>
+  </div>
+
+  <div class='form-submit-wrapper'>
+    <%= f.submit "Create" %> 
+  </div>
+<% end %>

@@ -4,7 +4,6 @@
 #
 #  id           :integer          not null, primary key
 #  name         :string
-#  gender       :integer
 #  height       :string
 #  weight       :string
 #  bust         :string
@@ -25,6 +24,10 @@
 #  compensation :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  gender       :integer
+#  country      :string
+#  new          :boolean          default(TRUE)
+#
 
 class Model < ApplicationRecord
   has_and_belongs_to_many :genres

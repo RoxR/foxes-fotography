@@ -25,6 +25,8 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  gender       :integer
+#  country      :string
+#  new          :boolean          default(TRUE)
 #
 
 require 'rails_helper'
