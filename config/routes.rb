@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get 'new_talent', to: 'new_talent#index'
   get 'photographers', to: 'photographers#index'
   get 'contact', to: 'contact#index'
+  match 'contact', to: 'contact#create', via: :post, as: :contact_create
   get 'our_story', to: 'our_story#index'
   get 'become_a_model', to: 'become_a_model#index'
+  match 'become_a_model', to: 'become_a_model#create', via: :post, as: :become_a_model_create
 end

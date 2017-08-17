@@ -2,44 +2,113 @@
   Become a Model
 </div>
 
-
-
-<h3 class="become-model"> If you are interested in modeling, we would like to see pictures of you using the form below. <br>Kindly fill in the details required and please do not use nude or 		filter photos.<br> We very much appreciate your submission and taking the time to contact us.
-</h3>
-
-
-
+<div class="become-a-model-intro">If you are interested in modeling, we would like to see pictures of you using the form below. <br>Kindly fill in the details required and please do not use nude or filter photos.<br> We very much appreciate your submission and taking the time to contact us.
+</div>
+<%= form_with(model: @model, url: become_a_model_create_path, id: 'become_a_model') do |f| %>
 <form class="become-model">
-      <h1> Personal Information </h1>
+  <div class='form-heading'>
+    <div class='form-heading-title'>
+      Personal Information
+    </div>
+  </div>
+  <div class='left'>
+    <div>
+      <%= label_tag :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= label_tag :height %>
+      <%= f.select :height,
+          options_for_select(Model.heights.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :weight %>
+      <%= f.select :weight,
+          options_for_select(Model.weights.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :bust %>
+      <%= f.select :bust,
+          options_for_select(Model.busts.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :waist %>
+      <%= f.select :waist,
+          options_for_select(Model.waists.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :hips %>
+      <%= f.select :hips,
+          options_for_select(Model.hips.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :cup %>
+      <%= f.text_field :cup %></div>
+    <div>
+      <%= label_tag :dress %>
+      <%= f.text_field :dress %></div>
+    <div>
+      <%= label_tag :shoe %>
+      <%= f.select :shoe,
+          options_for_select(Model.shoes.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :hair_color %>
+      <%= f.select :hair_color,
+          options_for_select(Model.hair_colors.map { |k| [k, k] }) %>
+    </div>
+  </div>
 
 
-
-
-
-
-      	<input type="text" name="name" placeholder="Name" required/>
-		<input type="integer" name="gender" placeholder="Gender" required/>
-		<input type="text" name="height" placeholder="Height" required/>
-		<input type="text" name="weight" placeholder="Weight" required/>
-		<input type="text" name="bust" placeholder="Bust" required/>
-		<input type="text" name="waist" placeholder="Waist" required/>
-		<input type="text" name="hips" placeholder="Hips" required/>
-		<input type="text" name="cup" placeholder="Cup" required/>
-		<input type="text" name="dress" placeholder="Dress" required/>
-		<input type="text" name="shoe" placeholder="Shoe" required/>
-		<input type="text" name="hair_color" placeholder="Hair Color" required/>
-		<input type="text" name="hair_length" placeholder="Hair Length" required/>
-		<input type="text" name="eye_color" placeholder="Eye Color" required/>
-		<input type="text" name="ethnicity" placeholder="Ethnicity" required/>
-		<input type="text" name="skin_color" placeholder="Skin Color" required/>
-		<input type="boolean" name="nudes" placeholder="Nudes" required/>
-		<input type="text" name="tattoos" placeholder="Tattoos" required/>
-		<input type="text" name="piercings" placeholder="Piercings" required/>
-		<input type="text" name="experience" placeholder="Experience" required/>
-		<input type="text" name="compensation" placeholder="Compensation" required/>
-           
-
- 
-  	<input type="submit" value="Send">
-</form>
-
+  <div class="right">
+    <div>
+      <%= label_tag :hair_length %>
+      <%= f.select :hair_length,
+          options_for_select(Model.hair_lengths.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :eye_color %>
+      <%= f.select :eye_color,
+          options_for_select(Model.eye_colors.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :ethnicity %>
+      <%= f.select :ethnicity,
+          options_for_select(Model.ethnicities.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :skin_color %>
+      <%= f.select :skin_color,
+          options_for_select(Model.skin_colors.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :nudes %>
+      <%= f.select :nudes,
+          options_for_select(Model.nudes.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :tattoos %>
+      <%= f.select :tattoos,
+          options_for_select(Model.tattoos.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :piercings %>
+      <%= f.select :piercings,
+          options_for_select(Model.piercings.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :experience %>
+      <%= f.select :experience,
+          options_for_select(Model.experience.map { |k| [k, k] }) %>
+    </div>
+    <div>
+      <%= label_tag :compensation %>
+      <%= f.select :compensation,
+          options_for_select(Model.compensation.map { |k| [k, k] }) %>
+    </div>
+    
+    <div class='form-submit-wrapper'>
+      <%= f.submit "Create" %> 
+    </div>
+  </div>
+<% end %>
