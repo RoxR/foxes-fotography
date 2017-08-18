@@ -1,15 +1,29 @@
 <div class="page-title">
   Contact Us
 </div>
-<div class="centered">
-  <h3 class="contact-address">Somewhere In Florida</h3>
-</div>
 <form action="https://formspree.io/roxanaguinea@gmail.com"
-  method="POST" class="enrol validate">
-  <input type="text" name="name" placeholder="Name" required/>
-  <input type="email" name="_replyto" placeholder="Email" required/>
-  <input type="text" name="phone" placeholder="Phone" required/>
-  <input type="text" name="Facebook Page" placeholder="Facebook" optional/>
-  <textarea name="message" placeholder="Message"required/></textarea>
-  <input type="submit" value="Send"/>
+  method="POST" class="enrol validate" id="">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" required/>
+  </div>
+  <div>
+    <label for="_replyto">Email</label>
+    <input type="email" name="_replyto" required/>
+  </div>
+  <div>
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" required/>
+  </div>
+  <div>
+    <label for="Facebook Page">Facebook Profile</label>
+    <input type="text" name="Facebook Page" optional/>
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea name="message" required/></textarea>
+  </div>
+  <div class="form-submit-wrapper">
+    <input type="submit" value="Send"/>
+  </div>
 </form>
