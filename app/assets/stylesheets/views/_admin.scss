@@ -9,19 +9,20 @@ body.admin {
     ul {
       @include center;
       display: block;
-      width: 368px;
+      width: 100%;
     }
 
     li {
       float: left;
       margin-left: $margin / 2;
       margin-right: $margin / 2;
+      text-align: center;
     }
 
     a {
       @extend .btn;
       text-align: center;
-      width: 160px;
+      width: 200px;
     }
   }
 }
