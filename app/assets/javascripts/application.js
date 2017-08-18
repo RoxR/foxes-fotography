@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.slick
+//= require chosen-jquery
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
@@ -29,5 +30,9 @@ $(document).on('turbolinks:load', function() {
 
   $('.company').on('click', function() {
     window.location.href = '/';
+  });
+
+  $('select').chosen({
+    width: '100%'
   });
 });

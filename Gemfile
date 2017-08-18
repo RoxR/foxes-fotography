@@ -13,6 +13,7 @@ gem 'puma', '~> 3.7'
 
 gem 'hirb'
 gem 'autoprefixer-rails'
+gem 'chosen-rails'
 gem 'compass-rails'
 gem 'devise', '4.3.0'
 gem 'faker'
