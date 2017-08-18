@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
+$(document).on('turbolinks:load', function() {
   $('#carousel').slick({
     // autoplay
     infinite: true,
@@ -28,7 +28,6 @@ $(function() {
   });
 
   $('.company').on('click', function() {
-    console.log('asdf');
     window.location.href = '/';
   });
 });
