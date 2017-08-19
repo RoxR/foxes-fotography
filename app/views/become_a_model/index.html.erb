@@ -127,7 +127,10 @@
     </div>
     <div>
       <%= f.label :picture %>
-      <%= f.file_field :picture %>
+      <%= f.file_field :picture, id: 'picture' %>
+      <div id='upload-preview'>
+        <img class='preview-img'>
+      </div>
     </div>
   </div>
   <div class='form-submit-wrapper'>
