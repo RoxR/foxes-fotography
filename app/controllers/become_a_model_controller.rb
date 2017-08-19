@@ -5,7 +5,6 @@ class BecomeAModelController < ApplicationController
   def create
   	@model = Model.new(become_a_model_params)
   	if @model.save
-  		# Flash not implemented yet, logging into console
   		puts 'Model saved succesfully'
   		redirect_to submitted_path
   	else
@@ -40,7 +39,8 @@ class BecomeAModelController < ApplicationController
   		:experience,
   		:compensation,
   		:country,
-      :hair_color
+      :hair_color,
+      :picture
   	)
   end
 end
