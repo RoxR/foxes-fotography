@@ -125,14 +125,23 @@
       <%= f.select :hair_color,
           options_for_select(Model.hair_colors.map { |k| [k, k] }) %>
     </div>
-    <div>
+  </div>
+     <div>
       <%= f.label :picture %>
       <%= f.file_field :picture, id: 'picture' %>
       <div id='upload-preview'>
-        <img class='preview-img'>
+        <div class='img-placeholder'>
+          <img data-id='1'>
+        </div>
+        <div class='img-placeholder'>
+          <img data-id='2'>
+        </div>
+        <div class='img-placeholder'>
+          <img data-id='3'> 
+        </div>
+
       </div>
     </div>
-  </div>
   <div class='form-submit-wrapper'>
       <%= f.submit "Submit" %> 
   </div>

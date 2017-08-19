@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var preview = $("#upload-preview img");
+    var preview = $(".img-placeholder img[data-id='1']");
     
     $("#picture").change(function(event){
        var input = $(event.currentTarget);
