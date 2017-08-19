@@ -39,7 +39,8 @@ class BecomeAModelController < ApplicationController
   		:experience,
   		:compensation,
   		:country,
-      :hair_color
+      :hair_color,
+      :picture
   	)
   end
 end

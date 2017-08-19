@@ -1,1 +1,3 @@
 <h1>Model form submitted. Congratulations!</h1>
+<h2>Cute pic of u</h2>
+<%= cl_image_tag(Model.last.picture_url, :width=>300, :height=>300, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
