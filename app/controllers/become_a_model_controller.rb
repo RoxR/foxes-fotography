@@ -4,6 +4,7 @@ class BecomeAModelController < ApplicationController
 
   def create
   	@model = Model.new(become_a_model_params)
+    @model.pictures.new(picture_params)
   	if @model.save
   		puts 'Model saved succesfully'
   		redirect_to submitted_path
@@ -39,8 +40,11 @@ class BecomeAModelController < ApplicationController
   		:experience,
   		:compensation,
   		:country,
-      :hair_color,
-      :picture
+      :hair_color
   	)
+  end
+
+  def picture_params
+    params.permit(:picture)
   end
 end

@@ -30,8 +30,7 @@
 #
 
 class Model < ApplicationRecord 
-  mount_uploader :picture, PictureUploader
-
+  has_many :pictures
   has_and_belongs_to_many :genres
 
   enum gender: [:female, :male]
