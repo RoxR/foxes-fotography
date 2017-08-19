@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.2'
 gem 'pg'
 gem 'puma', '~> 3.7'
 
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'carrierwave', '~> 1.0'
 gem 'cloudinary'
 gem 'hirb'

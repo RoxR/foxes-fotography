@@ -124,6 +124,10 @@
       <%= f.select :hair_color,
           options_for_select(Model.hair_colors.map { |k| [k, k] }) %>
     </div>
+    <div>
+      <%= f.label :picture %>
+      <%= f.file_field :picture %>
+    </div>
   </div>
   <div class='form-submit-wrapper'>
       <%= f.submit "Submit" %> 

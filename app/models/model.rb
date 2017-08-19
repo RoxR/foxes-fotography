@@ -29,7 +29,10 @@
 #  new          :boolean          default(TRUE)
 #
 
-class Model < ApplicationRecord
+class Model < ApplicationRecord 
+  
+  mount_uploader :image, PictureUploader
+
   has_and_belongs_to_many :genres
 
   enum gender: [:female, :male]
