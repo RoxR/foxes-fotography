@@ -5,6 +5,7 @@
 <div class="become-a-model-intro">If you are interested in modeling, we would like to see pictures of you using the form below. <br>Kindly fill in the details required and please do not use nude or filter photos.<br> We very much appreciate your submission and taking the time to contact us.
 </div>
 <%= form_with(model: @model, url: become_a_model_create_path, id: 'become_a_model') do |f| %>
+<%= f.hidden_field(:picture_cache) %>
 <form class="become-model">
   <div class='form-heading'>
     <div class='form-heading-title'>

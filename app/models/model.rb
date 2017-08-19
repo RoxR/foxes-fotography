@@ -30,8 +30,7 @@
 #
 
 class Model < ApplicationRecord 
-  
-  mount_uploader :image, PictureUploader
+  mount_uploader :picture, PictureUploader
 
   has_and_belongs_to_many :genres
 
