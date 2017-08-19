@@ -146,6 +146,10 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    handlebars_assets (0.23.2)
+      execjs (~> 2.0)
+      sprockets (>= 2.0.0)
+      tilt (>= 1.2)
     hirb (0.7.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -336,6 +340,7 @@ DEPENDENCIES
   font-awesome-rails
   guard-livereload (~> 2.5)
   guard-rspec (~> 4.7)
+  handlebars_assets
   hirb
   jbuilder (~> 2.5)
   jquery-rails

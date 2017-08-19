@@ -1,5 +1,19 @@
 body.contact {
+  #existing-inquirer {
+    display: block;
+
+    &.hide {
+      display: none;
+    }
+  }
+
   form {
+    display: block;
+
+    &.hide {
+      display: none;
+    }
+    
     input, textarea {
       margin-top: $margin / 2;
     }
