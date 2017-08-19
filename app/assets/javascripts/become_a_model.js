@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
     
     $('#picture_1').change(function(event){
        var preview = $(".picture img[data-id='1']");
@@ -32,5 +32,13 @@ $(document).ready(function(){
            preview.attr("src", image_base64);
        };
        reader.readAsDataURL(file);
+    });
+    $('#form-submit-btn').on('click', function(e) {
+      e.preventDefault();
+      var submitBtn = $('#form-submit-btn')
+      submitBtn.val('Processing').prop('disabled', true);
+      var theForm = $('#become_a_model');
+      theForm.submit();
+      return false;
     });
 });
