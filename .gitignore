@@ -21,6 +21,7 @@
 /yarn-error.log
 
 .byebug_history
+.envrc
 
 yen_models_development
 yen_models_test
