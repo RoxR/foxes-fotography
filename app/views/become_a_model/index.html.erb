@@ -126,22 +126,40 @@
           options_for_select(Model.hair_colors.map { |k| [k, k] }) %>
     </div>
   </div>
-     <div>
-      <%= f.label :picture %>
-      <%= f.file_field :picture, id: 'picture' %>
-      <div id='upload-preview'>
-        <div class='img-placeholder'>
+  <div>
+    <div class='img-header'>
+      <h2>Upload 3 images</h2>
+    </div>
+    <div id='upload-preview'>
+      <div class='img-placeholder'>
+        <div class='upload-button'>
+          <%= f.label :picture_1 %>
+          <%= f.file_field :picture, id: 'picture_1' %>
+        </div>
+        <div class='picture'>
           <img data-id='1'>
         </div>
-        <div class='img-placeholder'>
+      </div>
+      <div class='img-placeholder'>
+        <div class='upload-button'>
+          <%= f.label :picture_2 %>
+          <%= f.file_field :picture, id: 'picture_2' %>
+        </div>
+        <div class='picture'>
           <img data-id='2'>
         </div>
-        <div class='img-placeholder'>
-          <img data-id='3'> 
-        </div>
-
       </div>
+      <div class='img-placeholder'>
+        <div class='upload-button'>
+          <%= f.label :picture_3 %>
+          <%= f.file_field :picture, id: 'picture_3' %>
+        </div>
+        <div class='picture'>
+          <img data-id='3'>
+        </div>
+      </div>  
     </div>
+  </div>
   <div class='form-submit-wrapper'>
       <%= f.submit "Submit" %> 
   </div>
