@@ -31,10 +31,10 @@ $(document).on('turbolinks:load', function() {
       type: 'POST',
       data: data
     }).success(function() {
-      Storage.del('inquired_name', data.name);
-      Storage.del('inquired_email', data._replyto);
-      Storage.del('inquired_phone', data.phone);
-      Storage.del('inquired_message', data.message);
+      Storage.set('inquired_name', data.name);
+      Storage.set('inquired_email', data._replyto);
+      Storage.set('inquired_phone', data.phone);
+      Storage.set('inquired_message', data.message);
       form.off('submit');
       form.submit();
     });
