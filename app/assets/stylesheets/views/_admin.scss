@@ -9,7 +9,7 @@ body.admin {
     ul {
       @include center;
       display: block;
-      width: 100%;
+      width: 524px;
     }
 
     li {
@@ -22,7 +22,7 @@ body.admin {
     a {
       @extend .btn;
       text-align: center;
-      width: 200px;
+      width: 150px;
     }
   }
 }

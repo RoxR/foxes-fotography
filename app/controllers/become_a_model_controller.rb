@@ -1,5 +1,6 @@
 class BecomeAModelController < ApplicationController
   def index
+    @model = Model.new
   end
 
   def create

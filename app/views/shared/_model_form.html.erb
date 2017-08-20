@@ -1,19 +1,22 @@
 <%= form_with(model: model, url: url, id: 'become_a_model') do |f| %>
+  <%= f.hidden_field(:picture_cache) %>
   <div class='form-heading'>
     <div class='form-heading-title'>
       Personal Information
     </div>
   </div>
-  <% if @model.errors.any? %>
+
+  <% if model.errors.any? %>
     <div id='error_explanation'>
-      <h2><%= pluralize(@model.errors.count, 'error') %> prohibited this @model from being saved:</h2>
+      <h2><%= pluralize(model.errors.count, 'error') %> prohibited this model from being saved:</h2>
       <ul>
-        <% @model.errors.full_messages.each do |message| %>
+        <% model.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
+
   <div class='left'>
     <div>
       <%= label_tag :name %>
@@ -128,7 +131,46 @@
           options_for_select(Model.hair_colors.map { |k| [k, k] }) %>
     </div>
   </div>
+  <div class='image-uploads'>
+    <div class='form-heading'>
+      <div class='form-heading-title'>
+        Model Profile Images
+      </div>
+    </div>
+    <div id='upload-preview'>
+      <div class='img-placeholder'>
+        <div class='upload-button'>
+          <%= f.label :picture_1 %>
+          <%= f.file_field :picture_1, id: 'picture_1' %>
+        </div>
+        <div class='picture'>
+          <img data-id='1'>
+        </div>
+      </div>
+      <div class='img-placeholder'>
+        <div class='upload-button'>
+          <%= f.label :picture_2 %>
+          <%= f.file_field :picture_2, id: 'picture_2' %>
+        </div>
+        <div class='picture'>
+          <img data-id='2'>
+        </div>
+      </div>
+      <div class='img-placeholder'>
+        <div class='upload-button'>
+          <%= f.label :picture_3 %>
+          <%= f.file_field :picture_3, id: 'picture_3' %>
+        </div>
+        <div class='picture'>
+          <img data-id='3'>
+        </div>
+      </div>  
+    </div>
+  </div>
   <div class='form-submit-wrapper'>
-      <%= f.submit "Submit" %> 
+    <div id='form-submit'>
+      <%= f.submit "Submit", id: 'form-submit-btn' %> 
+      <i class="fa fa-spinner fa-spin" id='spinner'></i>
+    </div>
   </div>
 <% end %>
