@@ -8,6 +8,10 @@
     © Copyright 2017 Yen Models, Inc. All Rights Reserved.
   </div>
   <div class="admin-login">
-    <%= link_to 'Admin Login', admin_path %>
+    <% if user_signed_in? %>
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> 
+    <% else %>
+      <%= link_to 'Sign In', admin_path %> 
+    <% end %>
   </div>
 </footer>
