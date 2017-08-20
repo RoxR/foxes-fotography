@@ -9,6 +9,8 @@
   border-radius: $margin / 4;
 
   &:hover {
+    cursor: pointer;
+    
     .model-attribute-titles, .model-attributes {
       background: rgba(0, 0, 0, 0.5);
       top: 0px;

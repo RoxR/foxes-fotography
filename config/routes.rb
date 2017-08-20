@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   get 'our_story', to: 'our_story#index'
   get 'become_a_model', to: 'become_a_model#index'
   match 'become_a_model', to: 'become_a_model#create', via: :post, as: :become_a_model_create
+
+  resources :models, only: [:show]
 end
