@@ -19,7 +19,7 @@ class BecomeAModelController < ApplicationController
   private
 
   def become_a_model_params
-    params.permit(
+    params.require(:model).permit(
       :name,
       :email,
       :phone_number, 
@@ -47,6 +47,6 @@ class BecomeAModelController < ApplicationController
   end
 
   def picture_params
-    params.permit(:picture_1, :picture_2, :picture_3)
+    params.require(:model).permit(:picture_1, :picture_2, :picture_3, :preview_picture)
   end
 end

@@ -144,7 +144,7 @@
           <%= f.file_field :picture_1, id: 'picture_1' %>
         </div>
         <div class='picture'>
-          <img data-id='1'>
+          <img>
         </div>
       </div>
       <div class='img-placeholder'>
@@ -153,7 +153,7 @@
           <%= f.file_field :picture_2, id: 'picture_2' %>
         </div>
         <div class='picture'>
-          <img data-id='2'>
+          <img>
         </div>
       </div>
       <div class='img-placeholder'>
@@ -162,7 +162,16 @@
           <%= f.file_field :picture_3, id: 'picture_3' %>
         </div>
         <div class='picture'>
-          <img data-id='3'>
+          <img>
+        </div>
+      </div>
+      <div class='img-placeholder'>
+        <div class='upload-button'>
+          <%= f.label :picture_for_preview %>
+          <%= f.file_field :preview_picture, id: 'picture_preview' %>
+        </div>
+        <div class='picture'>
+          <img>
         </div>
       </div>  
     </div>
