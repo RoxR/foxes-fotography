@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function(){
       $('#form-submit').addClass('processing');
       submitBtn.val('Processing').prop('disabled', true);
       var theForm = $('#become_a_model');
-      //theForm.submit();
-      //return false;
+      theForm.submit();
+      return false;
     });
 });
