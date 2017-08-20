@@ -3,8 +3,8 @@
 </div>
 
 <div class="model-profile">
-  <!-- preview -->
-  <!-- hd 1 -->
-  <!-- hd 2 -->
-  <!-- hd 3 -->
+  <%= cl_image_tag(@model.pictures.first.preview_picture_url, width: 306, height: 400, gravity: 'face', crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
+  <%= cl_image_tag(@model.pictures.first.picture_1_url, width: 306, height: 400, gravity: 'face', crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
+  <%= cl_image_tag(@model.pictures.first.picture_2_url, width: 306, height: 400, gravity: 'face', crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
+  <%= cl_image_tag(@model.pictures.first.picture_3_url, width: 306, height: 400, gravity: 'face', crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
 </div>
