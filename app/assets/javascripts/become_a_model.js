@@ -35,10 +35,11 @@ $(document).on('turbolinks:load', function(){
     });
     $('#form-submit-btn').on('click', function(e) {
       e.preventDefault();
-      var submitBtn = $('#form-submit-btn')
+      var submitBtn = $('#form-submit-btn');
+      $('#form-submit').addClass('processing');
       submitBtn.val('Processing').prop('disabled', true);
       var theForm = $('#become_a_model');
-      theForm.submit();
-      return false;
+      //theForm.submit();
+      //return false;
     });
 });

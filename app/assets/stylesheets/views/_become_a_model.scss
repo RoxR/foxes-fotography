@@ -64,10 +64,30 @@ body.become_a_model {
     }
 
     .form-submit-wrapper {
-     margin-top: 100px;
+      margin-top: 100px;
       position: absolute;
       bottom: 24px;
       width: 952px;
+
+      #form-submit {
+        position: relative;
+
+        #spinner {
+          position: absolute;
+          top: 35px;
+          left: 380px;
+          display: none;
+        }
+
+        &.processing {
+          #spinner {
+            display: inline-block;
+          }
+          #form-submit-btn {
+            background: $palette-gray-dark;
+          }
+        }
+      }
     }
   }
 }
