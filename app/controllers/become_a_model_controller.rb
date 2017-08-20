@@ -4,8 +4,9 @@ class BecomeAModelController < ApplicationController
 
   def create
     @model = Model.new(become_a_model_params)
+    @model.pictures.new(picture_params)
+
     if @model.save
-      # Flash not implemented yet, logging into console
       puts 'Model saved succesfully'
       redirect_to submitted_path
     else
@@ -44,5 +45,7 @@ class BecomeAModelController < ApplicationController
     )
   end
 
-
+  def picture_params
+    params.permit(:picture_1, :picture_2, :picture_3)
+  end
 end

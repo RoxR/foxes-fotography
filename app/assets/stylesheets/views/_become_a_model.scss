@@ -39,11 +39,53 @@ form#become_a_model {
   .chosen-container-single .chosen-single div {
     top: -11px;
   }
+  .img-header {
+    margin-top: 50px;
+  }
+
+  #upload-preview {
+    margin-top: 50px;
+    .img-placeholder {
+      display: inline-block;
+      width: 306px;
+      height: 400px;
+      
+      .picture {
+        & > img {
+          border: 1px solid white;
+          border-radius: 6px;
+          width: 306px;
+          height: 400px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
 
   .form-submit-wrapper {
-   margin-top: 100px;
+    margin-top: 100px;
     position: absolute;
     bottom: 24px;
     width: 952px;
+
+    #form-submit {
+      position: relative;
+
+      #spinner {
+        position: absolute;
+        top: 35px;
+        left: 380px;
+        display: none;
+      }
+
+      &.processing {
+        #spinner {
+          display: inline-block;
+        }
+        #form-submit-btn {
+          background: $palette-gray-dark;
+        }
+      }
+    }
   }
 }

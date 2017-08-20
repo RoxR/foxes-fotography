@@ -1,1 +1,5 @@
 <h1>Model form submitted. Congratulations!</h1>
+<h2>Submitted pictures</h2>
+<%= cl_image_tag(Model.last.pictures.first.picture_1_url, :width=>306, :height=>400, :gravity=>"face", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
+<%= cl_image_tag(Model.last.pictures.first.picture_2_url, :width=>306, :height=>400, :gravity=>"face",  :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
+<%= cl_image_tag(Model.last.pictures.first.picture_3_url, :width=>306, :height=>400, :gravity=>"face",  :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>

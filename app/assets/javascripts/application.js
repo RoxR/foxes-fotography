@@ -15,6 +15,8 @@
 //= require chosen-jquery
 //= require rails-ujs
 //= require turbolinks
+//= require handlebars.runtime
+//= require_tree ./templates
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {

@@ -29,7 +29,8 @@
 #  new          :boolean          default(TRUE)
 #
 
-class Model < ApplicationRecord
+class Model < ApplicationRecord 
+  has_many :pictures
   has_and_belongs_to_many :genres
 
   enum gender: [:female, :male]

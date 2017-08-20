@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817194330) do
+ActiveRecord::Schema.define(version: 20170819215419) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20170817194330) do
     t.integer "genre_id", null: false
     t.index ["genre_id", "model_id"], name: "index_genres_models_on_genre_id_and_model_id"
     t.index ["model_id", "genre_id"], name: "index_genres_models_on_model_id_and_genre_id"
+  end
+
+  create_table "inquiries", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "facebook"
+    t.text "message"
   end
 
   create_table "models", force: :cascade do |t|
@@ -53,6 +63,15 @@ ActiveRecord::Schema.define(version: 20170817194330) do
     t.boolean "confirmed", default: false
     t.string "phone_number"
     t.string "email"
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "model_id"
+    t.string "picture_1"
+    t.string "picture_2"
+    t.string "picture_3"
   end
 
   create_table "users", force: :cascade do |t|
