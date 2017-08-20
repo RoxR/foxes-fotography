@@ -8,7 +8,7 @@ form#become_a_model {
   position: relative;
   margin-top: $margin;
   width: 100%;
-  height: 1012px;
+  height: 1590px;
 
   & > div.left {
     float: left;
@@ -39,16 +39,23 @@ form#become_a_model {
   .chosen-container-single .chosen-single div {
     top: -11px;
   }
-  .img-header {
-    margin-top: 50px;
+
+  .image-uploads {
+    bottom: 90px;
+    position: absolute;
+    clear: both;
   }
 
   #upload-preview {
-    margin-top: 50px;
     .img-placeholder {
       display: inline-block;
       width: 306px;
+      margin-top: 0;
       height: 400px;
+
+      &:nth-child(1), &:nth-child(2) {
+        margin-right: 9px;
+      }
       
       .picture {
         & > img {
