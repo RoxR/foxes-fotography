@@ -47,6 +47,10 @@ class Model < ApplicationRecord
     where(new: true)
   }
 
+  scope :unconfirmed, -> {
+    where(confirmed: false)
+  }
+
   def picture(which)
     self.pictures.first.send("picture_#{which}_url")
   end

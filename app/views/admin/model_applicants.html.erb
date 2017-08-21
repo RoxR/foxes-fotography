@@ -1,0 +1,5 @@
+<div class="models">
+  <% @unconfirmed.each do |u| %>
+    <%= render partial: 'shared/model', locals: { model: u } %>
+  <% end %>
+</div>

@@ -17,6 +17,12 @@ body.admin {
       margin-left: $margin / 2;
       margin-right: $margin / 2;
       text-align: center;
+
+      &.selected a {
+        background: $white;
+        color: $black;
+        font-weight: bold;
+      }
     }
 
     a {
