@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'admin', to: 'admin#index'
 
-    match 'admin/model/new', to: 'admin#new_model', via: :get
+    match 'admin/new_model', to: 'admin#new_model', via: :get
+    match 'admin/model_applicants', to: 'admin#model_applicants', via: :get
+    match 'admin/new_photographer', to: 'admin#new_photographer', via: :get
     match 'admin/model/create', to: 'admin#create_model', via: :create
-    match 'admin/photographer/new', to: 'admin#new_photographer', via: :get
     match 'admin/photographer/create', to: 'admin#create_photographer', via: :create
   end
 

@@ -47,6 +47,10 @@ class Model < ApplicationRecord
     where(new: true)
   }
 
+  scope :unconfirmed, -> {
+    where(confirmed: false)
+  }
+
   def preview_picture
     self.pictures.first.preview_picture_url
   end

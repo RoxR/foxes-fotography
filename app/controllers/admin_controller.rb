@@ -13,6 +13,10 @@ class AdminController < ApplicationController
     
   end
 
+  def model_applicants
+    @models = Model.unconfirmed
+  end
+
   def new_photographer
     #@model = Photographer.new
   end
