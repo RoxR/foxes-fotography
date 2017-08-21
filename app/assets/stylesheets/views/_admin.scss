@@ -31,4 +31,12 @@ body.admin {
       width: 150px;
     }
   }
+
+  .btn-confirm-model {
+    background: $palette-green;
+    z-index: 1001;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+  }
 }

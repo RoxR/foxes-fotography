@@ -1,3 +1,4 @@
 .our-story-intro {
   @extend .intro;
+  @include noselect;
 }

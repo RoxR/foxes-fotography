@@ -37,4 +37,18 @@ $(document).on('turbolinks:load', function() {
   $('select').chosen({
     width: '100%'
   });
+
+  (function(mark) {
+    var i = 0;
+    $(mark).on('click', function(e) {
+      e.stopPropagation();
+      ++i;
+      if (i >= 10) {
+        window.location.href = '/users/sign_in';
+      }
+    });
+    $(document).on('click', function() {
+      i = 0;
+    });
+  }($('#mark')));
 });

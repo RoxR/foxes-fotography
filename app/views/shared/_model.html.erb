@@ -1,4 +1,13 @@
 <div class="model" data-id="<%= model.id %>">
+  
+  <% if user_signed_in? %>
+    <%= link_to 'Confirm',
+      admin_confirm_model_path,
+      remote: true,
+      method: :put,
+      class: 'btn btn-confirm-model' %>
+  <% end %>
+
   <div class="model-portrait"></div>
   <div class="model-name">
     <%= model.name %>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
     match 'admin/new_model', to: 'admin#new_model', via: :get
     match 'admin/model_applicants', to: 'admin#model_applicants', via: :get
+    match 'admin/confirm_model', to: 'admin#confirm_model', via: :put, as: :admin_confirm_model
     match 'admin/new_photographer', to: 'admin#new_photographer', via: :get
     match 'admin/model/create', to: 'admin#create_model', via: :create
     match 'admin/photographer/create', to: 'admin#create_photographer', via: :create
