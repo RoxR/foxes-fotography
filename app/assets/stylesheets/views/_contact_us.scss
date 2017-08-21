@@ -1,4 +1,16 @@
 body.contact {
+
+  .google-map-header{
+    h1 {
+      margin-top: 50px;
+      text-align: center;
+      font-size: $font-size-ginormous;
+    }
+  }
+  .google-map {
+    margin-top: 50px;
+  }
+
   #existing-inquirer {
     @include shadow(0px, 0px, $margin / 2, $margin / 3, rgba(255, 255, 255, 0.1));    
     @include center;
