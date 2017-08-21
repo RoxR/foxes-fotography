@@ -1,9 +1,9 @@
 <h1>Model form submitted. Congratulations!</h1>
 <h2>Submitted pictures</h2>
-<%= cl_image_tag(Model.last.pictures.first.picture_1_url, width: 306, height: 400, gravity: "face", crop: "fill", fetch_format: 'auto', type: "fetch") %>
-<%= cl_image_tag(Model.last.pictures.first.picture_2_url, width: 306, height: 400, gravity: "face",  crop: "fill", fetch_format: 'auto', type: "fetch") %>
-<%= cl_image_tag(Model.last.pictures.first.picture_3_url, width: 306, height: 400, gravity: "face",  crop: "fill", fetch_format: 'auto', type: "fetch") %>
+<%= cl_image_tag(Model.last.picture(1), width: 306, height: 400, gravity: 'face', crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
+<%= cl_image_tag(Model.last.picture(2), width: 306, height: 400, gravity: 'face',  crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
+<%= cl_image_tag(Model.last.picture(3), width: 306, height: 400, gravity: 'face',  crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
 <h1>Preview image</h1>
 <div>
-  <%= cl_image_tag(Model.last.pictures.first.preview_picture_url, width: 306, height: 400, gravity: "face",  crop: "fill", fetch_format: 'auto', radius: "max", type: "fetch") %>
+  <%= cl_image_tag(Model.last.picture('preview'), width: 306, height: 400, gravity: 'face',  crop: 'fill', fetch_format: 'auto', radius: 'max', type: 'fetch') %>
 </div>

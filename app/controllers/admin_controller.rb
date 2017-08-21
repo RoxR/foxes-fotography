@@ -14,7 +14,7 @@ class AdminController < ApplicationController
   end
 
   def model_applicants
-    @models = Model.unconfirmed
+    @unconfirmed = Model.unconfirmed
   end
 
   def new_photographer
