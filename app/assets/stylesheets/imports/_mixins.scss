@@ -33,63 +33,6 @@
 
 
 
-@mixin header-tile($left-or-right) {
-  position: absolute;
-  z-index: 3000;
-
-  a, span, .fa {
-    display: inline-block;
-  }
-
-  a {
-    //background: rgba(0, 0, 0, 0.8);
-    color: $white;
-    padding: 0 $margin / 2;
-    text-decoration: none;
-    height: 100%;
-    font-family: 'Oswald';
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-
-    &:hover {
-      background: $palette-green-medium;
-      color: $white;
-    }
-  }
-}
-
-
-
-@mixin active-tab {
-  background-image: linear-gradient(rgba(22, 135, 70, 0.2), transparent);
-  border-top: 1px solid rgba(255, 255, 255, 1);
-  color: $white;
-  position: relative;
-
-  &:before, &:after {
-    content: "";
-    position: absolute;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 1)), to(transparent));
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1), transparent);
-    background-image: -moz-linear-gradient(rgba(255, 255, 255, 1), transparent);
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 1), transparent);
-    background-image: linear-gradient(rgba(255, 255, 255, 1), transparent);
-    top: -1px;
-    bottom: -1px;
-    width: 1px;
-  }
-
-  &:before {
-    left: -1px;
-  }
-
-  &:after {
-    right: -1px;
-  }
-}
-
-
-
 @mixin noselect {
   user-select: none;
 }

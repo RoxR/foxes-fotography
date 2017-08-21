@@ -3,8 +3,8 @@
   @include position(relative);
   font-family: 'Gruppo';
   font-size: $font-size-ginormous * 2;
-  width: 100%;
-  text-align: center; 
   margin-bottom: $margin;
   margin-top: $margin * 3;
+  text-align: center; 
+  width: 100%;
 }

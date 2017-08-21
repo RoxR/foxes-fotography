@@ -1,21 +1,21 @@
 .model {
+  border-radius: $margin / 4;
   display: inline-block;
-  margin: $margin / 2;
   height: 400px;
+  margin: $margin / 2;
+  overflow: hidden;
   position: relative;
   width: 306px;
-  overflow: hidden;
-  border-radius: $margin / 4;
 
   &:hover {
     cursor: pointer;
     
     .model-attribute-titles, .model-attributes {
       background: rgba(0, 0, 0, 0.5);
-      top: 0px;
       opacity: 1;
-      padding-top: 15px;
       padding-bottom: 15px;
+      padding-top: 15px;
+      top: 0px;
     }
   }
 
@@ -27,20 +27,20 @@
 
   .model-name {
     background: rgba(0, 0, 0, 0.5);
-    padding: $margin / 4;
-    font-size: $font-size-large;
-    position: absolute;
     bottom: 0;
+    font-size: $font-size-large;
     left: 0;
+    padding: $margin / 4;
+    position: absolute;
     right: 0;
     text-align: center;
   }
 
   .model-attribute-titles, .model-attributes {
-    transition: all .5s ease;
-    transform: translateZ(0);
-    opacity: 0;
     background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transform: translateZ(0);
+    transition: all .5s ease;
     & > div {
       @include noselect;
       font-size: $font-size-small;
@@ -50,10 +50,10 @@
   }
 
   .model-attribute-titles {
-    position: absolute;
     left: 0;
-    top: -360px;
+    position: absolute;
     right: 66.66%;
+    top: -360px;
 
     & > div {
       text-align: right;
@@ -61,10 +61,10 @@
   }
 
   .model-attributes {
+    left: 33.33%;
     position: absolute;
     right: 0;
     top: -360px;
-    left: 33.33%;
 
     & > div {
       padding-left: $margin / 3;

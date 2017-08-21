@@ -1,13 +1,13 @@
 form {
-  @include fontawesome-checkboxes;
   @include center;
+  @include fontawesome-checkboxes;
   @include shadow(0px, 0px, $margin / 2, $margin / 3, rgba(255, 255, 255, 0.1));
   background: lighten($palette-purple-dark, 3%);
-  border: 1px solid $white;
   border-radius: $margin / 2;
-  padding: $margin;
-  margin-bottom: $margin * 3;
+  border: 1px solid $white;
   font-size: $font-size-large;
+  margin-bottom: $margin * 3;
+  padding: $margin;
   top: $margin * 2;
   width: 520px;
 
@@ -26,15 +26,15 @@ form {
   input[type=password],
   select,
   textarea {
-    margin-top: $margin;
     font-size: $font-size-big;
+    margin-top: $margin;
     padding: $margin / 2;
     width: 100%;
 
     &, &:focus {
-      outline: none;
-      border: none;
       border: 1px solid $black;
+      border: none;
+      outline: none;
     }
   }
 
@@ -47,18 +47,18 @@ form {
   }
 
   input[type=submit] {
-    @include center;
     @extend .btn;
+    @include center;
     border: none;
-    width: 100%;
-    margin-top: $margin;
     font-size: $font-size-big;
+    margin-top: $margin;
     padding: $margin / 2;
+    width: 100%;
   }
 
   .form-heading {
-    text-align: center;
     margin-bottom: $margin;
+    text-align: center;
   }
 
   .form-heading-title {
@@ -66,10 +66,10 @@ form {
   }
 
   .form-heading-links {
-    margin-top: $margin * 2;
-    margin-bottom: $margin * 2;
     font-size: $font-size-base;
     font-style: italic;
+    margin-bottom: $margin * 2;
+    margin-top: $margin * 2;
 
     a {
       font-weight: bold;
@@ -78,9 +78,9 @@ form {
 
   .form-submit-wrapper {
     input[type=submit] {
+      background: $palette-green;
       border: none;
       color: $white;
-      background: $palette-green;
       font-size: $font-size-large;
       padding: $margin / 3;
 
@@ -91,19 +91,19 @@ form {
   }
 
   .form-rememberable {
-    margin-top: $margin;
-    margin-bottom: $margin / 2;
-    padding-left: 2px;
     display: inline-block;
+    margin-bottom: $margin / 2;
+    margin-top: $margin;
+    padding-left: 2px;
   }
 
   .form-footer-links {
-    margin-top: $margin;
-    margin-bottom: $margin / 3;
-    text-align: center;
     clear: both;
     font-size: $font-size-base;
     font-style: italic;
+    margin-bottom: $margin / 3;
+    margin-top: $margin;
+    text-align: center;
   }
 
   @include breakpoint(570px) {

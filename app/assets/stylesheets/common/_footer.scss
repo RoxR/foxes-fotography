@@ -4,23 +4,23 @@ footer {
 
   div {
     @include center;
-    margin-top: $margin;
     margin-bottom: $margin;
+    margin-top: $margin;
     text-align: center;
     width: 410px;
   }
 
   .social a {
-    height: 52px;
     display: inline-block;
+    height: 52px;
   }
 
   .fa {
     font-size: $font-size-ginormous;
     margin-left: $margin;
     margin-right: $margin;
-    transition: all .25s ease;
     text-shadow: 0px 0px 0px $white;
+    transition: all .25s ease;
 
     &:hover {
       text-shadow: 0px 0px 4px $white;
