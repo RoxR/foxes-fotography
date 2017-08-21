@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
 
   var LIMIT_SIZE_MB = 10
-  var whitelisted_extensions = ['jpg', 'jpeg', 'png', 'bmp', 'webp'];
+  var whitelisted_extensions = ['jpg', 'jpeg', 'gif', 'png', 'bmp', 'webp'];
 
   function isFileTooLarge(file) {
     return file.size / Math.pow(1024,2) > LIMIT_SIZE_MB
