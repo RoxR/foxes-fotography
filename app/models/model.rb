@@ -47,10 +47,6 @@ class Model < ApplicationRecord
     where(new: true)
   }
 
-  def preview_picture
-    self.pictures.first.preview_picture_url
-  end
-
   def picture(which)
     self.pictures.first.send("picture_#{which}_url")
   end

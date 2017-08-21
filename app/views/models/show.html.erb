@@ -5,7 +5,7 @@
 <div class="model-profile">
   <div class="left">
     <div class="model-profile-preview">
-      <%= cl_image_tag(@model.preview_picture, gravity: 'face', crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
+      <%= cl_image_tag(@model.picture('preview'), gravity: 'face', crop: 'fill', fetch_format: 'auto', type: 'fetch') %>
     </div>
   </div>
   <div class="right">

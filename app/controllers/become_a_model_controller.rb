@@ -47,6 +47,11 @@ class BecomeAModelController < ApplicationController
   end
 
   def picture_params
-    params.require(:model).permit(:picture_1, :picture_2, :picture_3, :preview_picture)
+    params.require(:model).permit(
+      :picture_1,
+      :picture_2,
+      :picture_3,
+      :picture_preview
+    )
   end
 end
