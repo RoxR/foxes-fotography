@@ -47,6 +47,14 @@ class Model < ApplicationRecord
     where(new: true)
   }
 
+  def preview_picture
+    self.pictures.first.preview_picture_url
+  end
+
+  def picture(which)
+    self.pictures.first.send("picture_#{which}_url")
+  end
+
   def self.heights
     [ %Q{4' 0" / 122 cm},
       %Q{4' 1" / 124 cm},
