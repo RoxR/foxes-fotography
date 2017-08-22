@@ -4,6 +4,14 @@
 <div class="models">
   <% @men.each do |m| %>
     <%= render partial: 'shared/model', locals: { model: m } %>
-    <%= link_to('Edit', model_edit_path(m), class: 'btn') %>
+    <div class='model-tools' data-id='<%= m.id %>'>
+      <%= link_to('Edit', model_edit_path(m), class: 'btn') %>
+      <%= link_to('Delete', 
+        model_delete_path(m.id),
+        class: 'btn',
+        remote: true,
+        method: :delete
+      ) %>
+    </div>
   <% end %>
 </div>

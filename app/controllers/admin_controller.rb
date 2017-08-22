@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_model, only: [:update_model, :edit_model]
+  before_action :set_model, only: [:update_model, :edit_model, :destroy_model]
 
   layout 'admin'
   
@@ -22,6 +22,10 @@ class AdminController < ApplicationController
 
   def new_model
     @model = Model.new
+  end
+
+  def destroy_model
+    @model.destroy!
   end
 
   def create_model

@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   authenticate :user do 
     get 'model_edit/:id', to: 'admin#edit_model', as: 'model_edit'
     match 'model_update/:id', to: 'admin#update_model', as: 'model_update', via: :patch
+    match 'model_delete/:id', to: 'admin#destroy_model', as: 'model_delete', via: :delete
   end
 
   resources :models, only: [:show]
