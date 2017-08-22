@@ -144,7 +144,7 @@
           <%= f.file_field :picture_1, id: 'picture_1' %>
         </div>
         <div class='picture'>
-          <img>
+          <%= model_image_tag(model, 1) %>
         </div>
       </div>
       <div class='img-placeholder'>
@@ -153,7 +153,7 @@
           <%= f.file_field :picture_2, id: 'picture_2' %>
         </div>
         <div class='picture'>
-          <img>
+          <%= model_image_tag(model, 2) %>
         </div>
       </div>
       <div class='img-placeholder'>
@@ -162,7 +162,7 @@
           <%= f.file_field :picture_3, id: 'picture_3' %>
         </div>
         <div class='picture'>
-          <img>
+          <%= model_image_tag(model, 3) %>
         </div>
       </div>
       <div class='img-placeholder'>
@@ -171,15 +171,15 @@
           <%= f.file_field :picture_preview, id: 'picture_preview' %>
         </div>
         <div class='picture'>
-          <img>
+          <%= model_image_tag(model, 'preview') %>
         </div>
       </div>  
     </div>
   </div>
   <div class='form-submit-wrapper'>
     <div id='form-submit'>
-      <%= f.submit "Submit", id: 'form-submit-btn' %> 
-      <i class="fa fa-spinner fa-spin" id='spinner'></i>
+      <%= f.submit 'Submit', id: 'form-submit-btn' %> 
+      <i class='fa fa-spinner fa-spin' id='spinner'></i>
     </div>
   </div>
 <% end %>

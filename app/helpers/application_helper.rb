@@ -1,7 +1,8 @@
 module ApplicationHelper
   def body_tag(&block)
-    ctrl = params[:controller].gsub(/\//, '-')
-    content_tag :body, capture(&block), class: ctrl
+    cls = params[:controller].gsub(/\//, '-')
+    cls << ' authenticated' if user_signed_in?
+    content_tag :body, capture(&block), class: cls
   end
 
   def livereload_tag

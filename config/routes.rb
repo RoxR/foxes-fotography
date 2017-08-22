@@ -25,5 +25,10 @@ Rails.application.routes.draw do
   get 'become_a_model', to: 'become_a_model#index'
   match 'become_a_model', to: 'become_a_model#create', via: :post, as: :become_a_model_create
 
+  authenticate :user do 
+    get 'model_edit/:id', to: 'admin#edit_model', as: 'model_edit'
+    match 'model_update/:id', to: 'admin#update_model', as: 'model_update', via: :patch
+  end
+
   resources :models, only: [:show]
 end
