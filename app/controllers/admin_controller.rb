@@ -8,12 +8,9 @@ class AdminController < ApplicationController
   end
 
   def edit_model
-    puts 'Edit from the server side!'
-
   end
 
   def update_model
-    puts 'Updating the model from server side!'
     if @model.pictures.update(picture_params) && @model.update(model_form_params)
       puts 'Model updated succesfully'
       redirect_to model_edit_path

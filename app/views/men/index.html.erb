@@ -4,5 +4,6 @@
 <div class="models">
   <% @men.each do |m| %>
     <%= render partial: 'shared/model', locals: { model: m } %>
+    <%= link_to('Edit', model_edit_path(m), class: 'btn') %>
   <% end %>
 </div>
