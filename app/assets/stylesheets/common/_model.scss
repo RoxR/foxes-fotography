@@ -1,11 +1,52 @@
-.model {
-  border-radius: $margin / 4;
+body:not(.authenticated) {
+  .model {
+    border-radius: $margin / 4;
+  }
+}
+
+.model-wrapper {
   display: inline-block;
-  height: 400px;
+  height: 450px;
   margin: $margin / 2;
-  overflow: hidden;
   position: relative;
   width: 306px;
+}
+
+.model-controls {
+  width: 100%;
+
+  & > a {
+    float: left;
+    width: 33.33%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &:first-child {
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-child(2) {
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.model {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  border-top-left-radius: $margin / 4;
+  border-top-right-radius: $margin / 4;
+
+  & > a {
+    z-index: 2;
+    position: relative;
+  }
 
   &:hover {
     cursor: pointer;
@@ -23,6 +64,7 @@
     @include position(absolute, 0);
     background-image: image-url(gandalf);
     background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .model-name {

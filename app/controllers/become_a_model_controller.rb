@@ -9,10 +9,10 @@ class BecomeAModelController < ApplicationController
 
     if @model.save
       puts 'Model saved succesfully'
-      redirect_to submitted_path
+      redirect_to model_path(@model)
     else
       puts 'There was an error saving a model'
-      redirect_to bcome_a_model_path
+      redirect_to become_a_model_path
     end
   end
 

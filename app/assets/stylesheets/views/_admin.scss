@@ -31,12 +31,20 @@ body.admin {
       width: 150px;
     }
   }
+  
+  .model {
+    .btn-confirm-model {
+      background: $palette-green;
+      z-index: 1001;
+      position: absolute;
+      top: 6px;
+      right: 6px; 
+    }
 
-  .btn-confirm-model {
-    background: $palette-green;
-    z-index: 1001;
-    position: absolute;
-    top: 6px;
-    right: 6px;
+    &:hover {
+      .btn-confirm-model {
+        opacity: 1;
+      }
+    }
   }
 }

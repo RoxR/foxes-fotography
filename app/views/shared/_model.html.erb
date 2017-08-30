@@ -1,85 +1,98 @@
-<div class="model" data-id="<%= model.id %>">
-  
-  <% if user_signed_in? %>
-    <%= link_to 'Confirm',
-      admin_confirm_model_path,
-      remote: true,
-      method: :put,
-      class: 'btn btn-confirm-model' %>
-  <% end %>
-
-  <div class="model-portrait"></div>
-  <div class="model-name">
-    <%= model.name %>
+<div class="model-wrapper">
+  <div class="model" data-id="<%= model.id %>">
+    <div class="model-portrait"></div>
+    <div class="model-name">
+      <%= model.name %>
+    </div>
+    <div class="model-attribute-titles">
+      <div class="model-attribute-titles-height">Height</div>
+      <div class="model-attribute-titles-weight">Weight</div>
+      <div class="model-attribute-titles-bust">Bust</div>
+      <div class="model-attribute-titles-waist">Waist</div>
+      <div class="model-attribute-titles-hips">Hips</div>
+      <!-- <div class="model-attribute-titles-cup">Cup</div>
+      <div class="model-attribute-titles-dress">Dress</div> -->
+      <div class="model-attribute-titles-shoe">Shoe</div>
+      <div class="model-attribute-titles-hair-color">Hair Color</div>
+      <div class="model-attribute-titles-hair-length">Hair Length</div>
+      <div class="model-attribute-titles-eye-color">Eye Color</div>
+      <div class="model-attribute-titles-ethnicity">Ethnicity</div>
+      <div class="model-attribute-titles-skin-color">Skin Color</div>
+      <div class="model-attribute-titles-nudes">Nudes</div>
+      <div class="model-attribute-titles-tattoos">Tattoos</div>
+      <div class="model-attribute-titles-piercings">Piercings</div>
+      <div class="model-attribute-titles-experience">Experience</div>
+      <div class="model-attribute-titles-compensation">Compensation</div>
+    </div>
+    <div class="model-attributes">
+      <div class="model-attributes-height">
+        <%= model.height %>
+      </div>
+      <div class="model-attributes-weight">
+        <%= model.weight %>
+      </div>
+      <div class="model-attributes-bust">
+        <%= model.bust %>
+      </div>
+      <div class="model-attributes-waist">
+        <%= model.waist %>
+      </div>
+      <div class="model-attributes-hips">
+        <%= model.hips %>
+      </div>
+      <div class="model-attributes-shoe">
+        <%= model.shoe %>
+      </div>
+      <div class="model-attributes-hair_color">
+        <%= model.hair_color %>
+      </div>
+      <div class="model-attributes-hair_length">
+        <%= model.hair_length %>
+      </div>
+      <div class="model-attributes-eye_color">
+        <%= model.eye_color %>
+      </div>
+      <div class="model-attributes-ethnicity">
+        <%= model.ethnicity %>
+      </div>
+      <div class="model-attributes-skin_color">
+        <%= model.skin_color %>
+      </div>
+      <div class="model-attributes-nudes">
+        <%= model.nudes %>
+      </div>
+      <div class="model-attributes-tattoos">
+        <%= model.tattoos %>
+      </div>
+      <div class="model-attributes-piercings">
+        <%= model.piercings %>
+      </div>
+      <div class="model-attributes-experience">
+        <%= model.experience %>
+      </div>
+      <div class="model-attributes-compensation">
+        <%= model.compensation %>
+      </div>
+    </div>
   </div>
-  <div class="model-attribute-titles">
-    <div class="model-attribute-titles-height">Height</div>
-    <div class="model-attribute-titles-weight">Weight</div>
-    <div class="model-attribute-titles-bust">Bust</div>
-    <div class="model-attribute-titles-waist">Waist</div>
-    <div class="model-attribute-titles-hips">Hips</div>
-    <!-- <div class="model-attribute-titles-cup">Cup</div>
-    <div class="model-attribute-titles-dress">Dress</div> -->
-    <div class="model-attribute-titles-shoe">Shoe</div>
-    <div class="model-attribute-titles-hair-color">Hair Color</div>
-    <div class="model-attribute-titles-hair-length">Hair Length</div>
-    <div class="model-attribute-titles-eye-color">Eye Color</div>
-    <div class="model-attribute-titles-ethnicity">Ethnicity</div>
-    <div class="model-attribute-titles-skin-color">Skin Color</div>
-    <div class="model-attribute-titles-nudes">Nudes</div>
-    <div class="model-attribute-titles-tattoos">Tattoos</div>
-    <div class="model-attribute-titles-piercings">Piercings</div>
-    <div class="model-attribute-titles-experience">Experience</div>
-    <div class="model-attribute-titles-compensation">Compensation</div>
-  </div>
-  <div class="model-attributes">
-    <div class="model-attributes-height">
-      <%= model.height %>
-    </div>
-    <div class="model-attributes-weight">
-      <%= model.weight %>
-    </div>
-    <div class="model-attributes-bust">
-      <%= model.bust %>
-    </div>
-    <div class="model-attributes-waist">
-      <%= model.waist %>
-    </div>
-    <div class="model-attributes-hips">
-      <%= model.hips %>
-    </div>
-    <div class="model-attributes-shoe">
-      <%= model.shoe %>
-    </div>
-    <div class="model-attributes-hair_color">
-      <%= model.hair_color %>
-    </div>
-    <div class="model-attributes-hair_length">
-      <%= model.hair_length %>
-    </div>
-    <div class="model-attributes-eye_color">
-      <%= model.eye_color %>
-    </div>
-    <div class="model-attributes-ethnicity">
-      <%= model.ethnicity %>
-    </div>
-    <div class="model-attributes-skin_color">
-      <%= model.skin_color %>
-    </div>
-    <div class="model-attributes-nudes">
-      <%= model.nudes %>
-    </div>
-    <div class="model-attributes-tattoos">
-      <%= model.tattoos %>
-    </div>
-    <div class="model-attributes-piercings">
-      <%= model.piercings %>
-    </div>
-    <div class="model-attributes-experience">
-      <%= model.experience %>
-    </div>
-    <div class="model-attributes-compensation">
-      <%= model.compensation %>
-    </div>
+  <div class="model-controls">
+    <% if user_signed_in? %>
+      <%= link_to 'Confirm',
+        admin_confirm_model_path,
+        remote: true,
+        method: :put,
+        class: 'btn btn-confirm-model'
+      %>
+      <%= link_to 'Edit', 
+        model_edit_path(model),
+        class: 'btn'
+      %>
+      <%= link_to 'Delete', 
+        model_delete_path(model.id),
+        class: 'btn',
+        remote: true,
+        method: :delete
+      %>
+    <% end %>
   </div>
 </div>
