@@ -4,6 +4,11 @@ nav {
   position: relative;
   z-index: 1000;
 
+  .logo {
+    float: left;
+    background-image: url(image-path('logo'));
+  }
+
   li {
     display: inline-block;
 
