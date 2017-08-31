@@ -106,4 +106,16 @@ form#become_a_model {
       }
     }
   }
+
+  @include breakpoint(1012px) {
+    height: 2780px;
+
+    & > div.left, & > div.right {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  @include breakpoint(688px) {
+  }
 }

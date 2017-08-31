@@ -3,4 +3,8 @@
   clear: both;
   width: 1024px;
   padding: $margin / 2;
+
+  @include breakpoint(1012px) {
+    width: 100%;
+  }
 }

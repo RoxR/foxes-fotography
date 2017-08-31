@@ -17,7 +17,7 @@ $(document).on('turbolinks:load', function() {
 
   $('#form-submit-btn').on('click', function(e) {
     e.preventDefault();
-    var submitBtn = ;
+    var submitBtn = $('#form-submit-btn');
     $('#form-submit').addClass('processing');
     $('#form-submit-btn')
       .val('Processing')
