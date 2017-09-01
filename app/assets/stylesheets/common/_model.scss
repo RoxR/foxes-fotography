@@ -63,7 +63,7 @@ body:not(.authenticated) {
   .model-portrait {
     @include position(absolute, 0);
     background-image: image-url(gandalf);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
