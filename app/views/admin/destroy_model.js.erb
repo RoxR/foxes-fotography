@@ -1,8 +1,5 @@
 $('.model[data-id="<%= @model.id %>"')
+  .closest('.model-wrapper')
   .fadeOut(1000, function() {
     $(this).remove();
-});
-$('.model-tools[data-id="<%= @model.id %>"]')
-  .fadeOut(1000, function() {
-    $(this).remove();
-});
+  });
