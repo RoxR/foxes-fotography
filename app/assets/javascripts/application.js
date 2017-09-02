@@ -21,11 +21,11 @@
 
 $(document).on('turbolinks:load', function() {
   $(document).on('click', '.fa-bars', function(e) {
-    $('nav ul.right').toggle();
+    $('nav ul.right').toggleClass('shown');
   });
 
   $(document).on('mouseleave', 'nav ul.right', function(e) {
-    $('nav ul.right').hide();
+    $('nav ul.right').removeClass('shown');
   });
 
   $('#carousel').slick({
