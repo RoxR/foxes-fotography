@@ -7,4 +7,20 @@
   margin-top: $margin * 3;
   text-align: center; 
   width: 100%;
+
+  @include breakpoint(770px) {
+    font-size: 76px
+  }
+
+  @include breakpoint(610px) {
+    font-size: 60px;
+  }
+
+  @include breakpoint(490px) {
+    font-size: 50px;
+  }
+
+  @include breakpoint(410px) {
+    font-size: 38px;
+  }
 }
