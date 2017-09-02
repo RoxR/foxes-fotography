@@ -25,7 +25,7 @@ $(document).on('turbolinks:load', function() {
   });
 
   $(document).on('mouseleave', 'nav ul.right', function(e) {
-    $('nav ul.right').removeClass('shown');
+    $('nav ul.right').hide();
   });
 
   $('#carousel').slick({
