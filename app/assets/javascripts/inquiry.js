@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function() {
   var phone = Storage.get('inquired_phone')
   var message = Storage.get('inquired_message')
 
-  if(email !== null) {
+  if (email !== null) {
     existing_inquirer.html(HandlebarsTemplates['existing_inquirer']({
       email: email,
       name: name,
@@ -16,7 +16,7 @@ $(document).on('turbolinks:load', function() {
     form.addClass('hide');
     existing_inquirer.removeClass('hide');
 
-    $(document).on('click', '#create-additional-inquiry', function(e) {
+    $(document).on('click touchstart', '#create-additional-inquiry', function(e) {
       e.preventDefault();
       form.removeClass('hide');
       existing_inquirer.addClass('hide');

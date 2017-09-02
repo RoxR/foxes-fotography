@@ -20,7 +20,7 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
-  $(document).on('click', '.fa-bars', function(e) {
+  $(document).on('click touchstart', '.fa-bars', function(e) {
     $('nav ul.right').toggleClass('shown');
   });
 
@@ -38,7 +38,7 @@ $(document).on('turbolinks:load', function() {
     centerMode: true
   });
 
-  $('.company').on('click', function() {
+  $('.company').on('click touchstart', function() {
     window.location.href = '/';
   });
 
@@ -48,14 +48,14 @@ $(document).on('turbolinks:load', function() {
 
   (function(mark) {
     var i = 0;
-    $(mark).on('click', function(e) {
+    $(mark).on('click touchstart', function(e) {
       e.stopPropagation();
       ++i;
       if (i >= 10) {
         window.location.href = '/users/sign_in';
       }
     });
-    $(document).on('click', function() {
+    $(document).on('click touchstart', function() {
       i = 0;
     });
   }($('#mark')));

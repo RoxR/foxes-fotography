@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
-  $('#form-submit-btn').on('click', function(e) {
+  $('#form-submit-btn').on('click touchstart', function(e) {
     e.preventDefault();
     var submitBtn = $('#form-submit-btn');
     $('#form-submit').addClass('processing');
