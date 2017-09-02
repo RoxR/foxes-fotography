@@ -20,6 +20,14 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
+  $(document).on('click', '.fa-bars', function(e) {
+    $('nav ul.right').toggle();
+  });
+
+  $(document).on('mouseleave', 'nav ul.right', function(e) {
+    $('nav ul.right').removeClass('shown');
+  });
+
   $('#carousel').slick({
     // autoplay
     infinite: true,

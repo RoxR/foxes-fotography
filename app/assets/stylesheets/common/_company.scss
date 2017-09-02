@@ -1,0 +1,44 @@
+.company-backdrop, .company {
+  position: absolute;
+  text-shadow: 0px 0px 0px $white;
+  transition: all .25s ease;
+
+  &:hover, &:active, &:focus {
+    cursor: pointer;
+    text-shadow: 0px 0px 4px $white;
+  }
+}
+
+.company-backdrop {
+  background: rgba(8, 6, 19, 0.75);
+  height: 56px;
+  left: -27px;
+  transform: skew(-12deg);
+  width: 568px;
+  z-index: 1000;
+}
+
+.company {
+  @extend .title;
+  color: $white;
+  left: 0;
+  top: $header-height;
+  z-index: 1001;
+
+  .company-name-foxes, .company-name-fotography {
+    position: relative;
+    z-index: 1002;
+  }
+
+  .company-name-foxes {
+    font-size: $font-size-ginormous * 1.5;
+    left: 12px;
+    top: 13px;
+  }
+
+  .company-name-fotography {
+    font-size: $font-size-huge * 1.5;
+    left: 267px;
+    top: 4px;
+  }
+}
