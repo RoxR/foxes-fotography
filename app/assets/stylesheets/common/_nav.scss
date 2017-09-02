@@ -49,8 +49,9 @@ nav {
       background: rgba(8, 6, 19, 0.75);
       top: 46px;
       position: fixed;
-      right: 0;
+      right: -22px;
       display: none;
+      transform: skew(12deg);
 
       &.shown {
         display: block;
@@ -63,6 +64,9 @@ nav {
 
         a {
           border-bottom: none; 
+          transform: skew(-12deg);
+          text-align: left;
+          padding-left: 12px;
         }
       }
     }
