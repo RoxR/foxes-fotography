@@ -1,13 +1,3 @@
-#btn-edit {
-  display: none;
-}
-
-body.authenticated {
-  #btn-edit {
-    display: block;
-  }
-}
-
 *, *:before, *:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;

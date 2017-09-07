@@ -10,6 +10,23 @@ nav {
     background-image: url(image-path('logo'));
   }
 
+  ul {
+    display: block;
+  
+    &.left {
+      li {
+        margin-left: $margin / 2;
+      }
+    }
+  
+    &.right {
+      li {
+        margin-right: $margin / 2;
+      }
+    }
+  }
+  
+
   li {
     display: inline-block;
 
@@ -26,22 +43,6 @@ nav {
         border-bottom: 1px solid rgba(255, 255, 255, 1);
         text-shadow: 0px 0px 4px $white;
       }
-    }
-  }
-
-  ul {
-    display: block;
-  }
-
-  ul.left {
-    li {
-      margin-left: $margin / 2;
-    }
-  }
-
-  ul.right {
-    li {
-      margin-right: $margin / 2;
     }
   }
 
