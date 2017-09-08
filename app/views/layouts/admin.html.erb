@@ -4,12 +4,11 @@
 
   <%= body_tag do %>
     <%= render partial: 'shared/nav' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render partial: 'shared/alert_notice.html.erb' %>
     <div class="page-title">
       Admin Panel
     </div>
-    <div class="admin-controls"> 
+    <div class="admin-controls">
       <ul>
         <%= admin_panel_link(:model_applicants) %>
         <%= admin_panel_link(:new_model) %>

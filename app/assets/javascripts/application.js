@@ -21,7 +21,7 @@
 
 $(document).on('turbolinks:load', function() {
   $(document).on('click touchstart', '.fa-bars', function(e) {
-    $('nav ul.right').toggleClass('shown');
+    $('nav ul.right').addClass('shown');
   });
 
   $(document).on('mouseleave', 'nav ul.right', function(e) {

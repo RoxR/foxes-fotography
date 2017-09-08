@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: pictures
+#
+#  id              :integer          not null, primary key
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  model_id        :integer
+#  picture_1       :string
+#  picture_2       :string
+#  picture_3       :string
+#  picture_preview :string
+#
+
 class Picture < ApplicationRecord
   validates_size_of :picture_1, maximum: 10.megabytes, message: "Picture 1 is over 10 megabytes"
   validates_size_of :picture_2, maximum: 10.megabytes, message: "Picture 2 is over 10 megabytes"

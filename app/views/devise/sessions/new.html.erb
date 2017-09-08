@@ -1,4 +1,4 @@
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { id: 'admin-sign-in' }) do |f| %>
   <div class='form-heading'>
     <div class='form-heading-title'>
       Sign In
@@ -26,7 +26,7 @@
   <% end -%>
 
   <div class='form-submit-wrapper'>
-    <%= f.submit 'Sign in' %>
+    <%= f.submit 'Sign In' %>
   </div>
 
   <%= render 'devise/shared/links' %>

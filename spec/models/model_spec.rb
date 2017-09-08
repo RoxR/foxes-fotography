@@ -27,6 +27,9 @@
 #  gender       :integer
 #  country      :string
 #  new          :boolean          default(TRUE)
+#  confirmed    :boolean          default(FALSE)
+#  phone_number :string
+#  email        :string
 #
 
 require 'rails_helper'

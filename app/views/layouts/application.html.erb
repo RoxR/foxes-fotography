@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-<%= render 'application/favicon' %>
   <%= render partial: 'shared/head' %>
 
   <%= body_tag do %>
     <%= render partial: 'shared/nav' %>
+    <%= render partial: 'shared/alert_notice.html.erb' %>
     <div class="container">
-      <%= render partial: 'shared/alert_notice.html.erb' %>
       <%= yield %>
     </div>
     <%= render partial: 'shared/footer' %>

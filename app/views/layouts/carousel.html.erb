@@ -4,8 +4,7 @@
 
   <%= body_tag do %>
     <%= render partial: 'shared/nav' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render partial: 'shared/alert_notice.html.erb' %>
     <%= yield %>
     <%= render partial: 'shared/footer' %>
   <% end %>
