@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function() {
     dots: true,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     centerMode: true
   });
 

@@ -3,9 +3,13 @@
   -webkit-font-smoothing: antialiased;
 }
 
-html, body {
+html {
   height: 100%;
+}
+
+body {
   min-height: 100%;
+  position: relative;
 }
 
 body {
