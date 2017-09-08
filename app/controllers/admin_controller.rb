@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   before_action :set_model, only: [:update_model, :edit_model, :destroy_model]
 
   layout 'admin'
-  
+
   def index
   end
 
@@ -28,8 +28,17 @@ class AdminController < ApplicationController
     @model.destroy!
   end
 
-  def create_model
-    
+  def create
+    @model = Model.new(model_form_params)
+    @model.pictures.new(picture_params)
+
+    if @model.save
+      puts 'Model saved succesfully'
+      redirect_to model_path(@model)
+    else
+      puts 'There was an error saving a model'
+      redirect_to become_a_model_path
+    end
   end
 
   def model_applicants
@@ -50,23 +59,23 @@ class AdminController < ApplicationController
     params.require(:model).permit(
       :name,
       :email,
-      :phone_number, 
+      :phone_number,
       :gender,
-      :height, 
-      :weight, 
-      :bust, 
-      :waist, 
-      :hips, 
-      :cup, 
+      :height,
+      :weight,
+      :bust,
+      :waist,
+      :hips,
+      :cup,
       :dress,
       :shoe,
       :hair_length,
       :eye_color,
-      :ethnicity, 
+      :ethnicity,
       :skin_color,
       :nudes,
       :tattoos,
-      :piercings, 
+      :piercings,
       :experience,
       :compensation,
       :country,

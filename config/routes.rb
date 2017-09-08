@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   root to: 'home#index'
 
   devise_scope :user do
@@ -10,8 +10,8 @@ Rails.application.routes.draw do
     match 'admin/model_applicants', to: 'admin#model_applicants', via: :get
     match 'admin/confirm_model', to: 'admin#confirm_model', via: :put, as: :admin_confirm_model
     match 'admin/new_photographer', to: 'admin#new_photographer', via: :get
-    match 'admin/model/create', to: 'admin#create_model', via: :create
-    match 'admin/photographer/create', to: 'admin#create_photographer', via: :create
+    match 'admin/model/create', to: 'admin#create', via: :post
+    match 'admin/photographer/create', to: 'admin#create_photographer', via: :post
   end
 
   match 'submitted', to: 'become_a_model#submitted', via: :get
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get 'audition', to: 'become_a_model#index'
   match 'become_a_model', to: 'become_a_model#create', via: :post, as: :become_a_model_create
 
-  authenticate :user do 
+  authenticate :user do
     get 'model_edit/:id', to: 'admin#edit_model', as: 'model_edit'
     match 'model_update/:id', to: 'admin#update_model', as: 'model_update', via: :patch
     match 'model_delete/:id', to: 'admin#destroy_model', as: 'model_delete', via: :delete
