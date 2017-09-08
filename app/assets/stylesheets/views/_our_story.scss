@@ -1,4 +1,8 @@
 .our-story-intro {
   @extend .intro;
   @include noselect;
+
+  p {
+    margin: $margin 0;
+  }
 }
