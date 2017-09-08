@@ -42,3 +42,44 @@
     top: 4px;
   }
 }
+
+@include breakpoint(673px) {
+  .company {
+    top: $margin;
+    position: relative;
+    width: 100%;
+
+    .company-backdrop {
+      display: none;
+    }
+
+    .company-name-foxes, .company-name-fotography {
+      @include center;
+      text-align: center;
+      top: auto;
+      left: auto;
+    }
+
+    .company-name-foxes {
+      font-size: 92px;
+      height: 60px;
+    }
+
+    .company-name-fotography {
+
+    }
+  }
+}
+
+@include breakpoint(673px) {
+  .company {
+    .company-name-foxes {
+      font-size: 72px;
+      height: 50px;
+    }
+
+    .company-name-fotography {
+      font-size: 30px;
+    }
+  }
+}

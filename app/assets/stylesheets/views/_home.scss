@@ -1,2 +1,7 @@
 body.home {
+  @include breakpoint(673px) {
+    #carousel {
+      top: 50px;
+    }
+  }
 }
