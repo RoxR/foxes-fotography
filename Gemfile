@@ -33,19 +33,22 @@ gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 
 group :development, :test do
+  gem "database_cleaner"
+  gem "rspec-rails"
   gem 'annotate'
   gem 'bullet'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '2.13'
   gem 'factory_girl_rails'
   gem 'guard-rspec', '~> 4.7', require: false
   gem 'pry'
+  gem 'rails_real_favicon'
   gem 'rspec-rails'
   gem 'timecop'
-  gem 'rails_real_favicon'
 end
 
 group :development do
+  gem "capybara"
+  gem "selenium-webdriver"
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'guard-livereload', '~> 2.5', require: false

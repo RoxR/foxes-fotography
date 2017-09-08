@@ -70,6 +70,8 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    childprocess (0.7.1)
+      ffi (~> 1.0, >= 1.0.11)
     chosen-rails (1.5.2)
       coffee-rails (>= 3.2)
       railties (>= 3.0)
@@ -106,6 +108,7 @@ GEM
       sass-rails (< 5.1)
       sprockets (< 4.0)
     concurrent-ruby (1.0.5)
+    database_cleaner (1.6.1)
     debug_inspector (0.0.3)
     devise (4.3.0)
       bcrypt (~> 3.0)
@@ -287,6 +290,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    selenium-webdriver (3.5.2)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
     shellany (0.0.1)
     slack-notifier (2.3.1)
     slop (3.6.0)
@@ -340,11 +346,12 @@ DEPENDENCIES
   binding_of_caller
   bullet
   byebug
-  capybara (= 2.13)
+  capybara
   carrierwave (~> 1.0)
   chosen-rails
   cloudinary
   compass-rails
+  database_cleaner
   devise (= 4.3.0)
   factory_girl_rails
   faker
@@ -367,6 +374,7 @@ DEPENDENCIES
   rails_real_favicon
   rspec-rails
   sass-rails (~> 5.0)
+  selenium-webdriver
   slack-notifier
   spring
   spring-watcher-listen (= 2.0.0)
