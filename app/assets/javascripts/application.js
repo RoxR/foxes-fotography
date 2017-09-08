@@ -23,12 +23,12 @@
 $(document).on('turbolinks:load', function() {
   new FastClick(document.body);
 
-  $(document).on('mousedown touch', '.fa-bars', function(e) {
+  $(document).on('click', '.fa-bars', function(e) {
     e.stopPropagation();
     $('nav ul').toggleClass('shown');
   });
 
-  $(document).on('mousedown touch', function(e) {
+  $(document).on('click', function(e) {
     $('nav ul').removeClass('shown');
   });
 

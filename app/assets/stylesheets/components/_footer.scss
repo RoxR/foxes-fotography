@@ -30,14 +30,15 @@ footer {
   }
 
   @include breakpoint(673px) {
-    position: absolute;
-    bottom: $margin;
-    left: 0;
-    right: 0;
+    margin: 74px auto 24px;
   }
 
   @include breakpoint(440px) {
-    margin: 0 auto;
+    .social {
+      i::before {
+        font-size: 36px;
+      }
+    }
 
     .copyright {
       span {
