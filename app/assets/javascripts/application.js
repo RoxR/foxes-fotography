@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.slick
+//= require fastclick
 //= require chosen-jquery
 //= require rails-ujs
 //= require turbolinks
@@ -20,12 +21,15 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
-  $(document).on('click touchstart', '.fa-bars', function(e) {
-    $('nav ul.right').addClass('shown');
+  new FastClick(document.body);
+
+  $(document).on('mousedown touch', '.fa-bars', function(e) {
+    e.stopPropagation();
+    $('nav ul').toggleClass('shown');
   });
 
-  $(document).on('mouseleave', 'nav ul.right', function(e) {
-    $('nav ul.right').removeClass('shown');
+  $(document).on('mousedown touch', function(e) {
+    $('nav ul').removeClass('shown');
   });
 
   $('#carousel').slick({

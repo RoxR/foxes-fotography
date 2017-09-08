@@ -33,6 +33,11 @@
 
   .slick-prev, .slick-next {
     z-index: 1;
+    top: 47%;
+
+    @include breakpoint(673px) {
+      top: 43%;
+    }
   }
 
   .slick-prev {

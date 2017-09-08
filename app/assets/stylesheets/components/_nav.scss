@@ -1,5 +1,6 @@
 nav {
   background: rgba(8, 6, 19, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   height: 46px;
   position: relative;
   z-index: 1004;
@@ -12,26 +13,25 @@ nav {
 
   ul {
     display: block;
-  
+
     &.left {
       li {
         margin-left: $margin / 2;
       }
     }
-  
+
     &.right {
       li {
         margin-right: $margin / 2;
       }
     }
   }
-  
+
 
   li {
     display: inline-block;
 
     a {
-      border-bottom: 1px solid rgba(255, 255, 255, .1);
       display: block;
       font-size: $font-size-big;
       padding-bottom: $margin / 4;
@@ -52,7 +52,9 @@ nav {
 
   @include breakpoint(673px) {
     ul.right {
-      background: rgba(8, 6, 19, 0.75);
+      border-left: 1px solid rgba(255, 255, 255, 0.25);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      background: $palette-purple-dark;
       top: 46px;
       position: fixed;
       right: -22px;
