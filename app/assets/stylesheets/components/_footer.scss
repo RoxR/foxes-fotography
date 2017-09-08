@@ -30,7 +30,7 @@ footer {
   }
 
   @include breakpoint(673px) {
-    margin: 74px auto 24px;
+    margin: 74px auto $margin * 2;
   }
 
   @include breakpoint(440px) {
